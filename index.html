@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3 oktober hondenschool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #252d56; --muted: #747889; --surface: #fff; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #fff;
+      color: var(--ink);
+      font-family: Roboto, Arial, sans-serif;
+    }
+    main { width: min(100% - 48px, 930px); margin: 51px auto 64px; }
+    h1 {
+      margin: 0 0 42px;
+      font: 700 clamp(1.55rem, 2.4vw, 2rem)/1.08 "Roboto Slab", Georgia, serif;
+      letter-spacing: -0.035em;
+    }
+    .workshops {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      grid-auto-rows: 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .card {
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      min-height: 246px;
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 14px 22px rgba(21, 37, 66, .12);
+      color: inherit;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover, .card:focus-visible { transform: translateY(-5px); box-shadow: 0 18px 30px rgba(21, 37, 66, .18); }
+    .card:focus-visible { outline: 3px solid #8e7db3; outline-offset: 3px; }
+    .card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
+    }
+    .content { padding: 13px 25px 16px; }
+    h2 { margin: 0 0 5px; font: 700 22px/1.1 "Roboto Slab", Georgia, serif; letter-spacing: -.02em; }
+    p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.25; }
+    @media (max-width: 650px) {
+      main { width: min(100% - 40px, 620px); margin: 38px auto 48px; }
+      h1 { margin-bottom: 30px; }
+      .workshops { gap: 16px; }
+    }
+    @media (max-width: 420px) {
+      .workshops { grid-template-columns: 1fr; }
+      .card { display: grid; grid-template-columns: 128px 1fr; min-height: 128px; }
+      .card img { height: 128px; aspect-ratio: 1; }
+      .content { align-self: center; padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Schrijf je hier in voor de workshop!</h1>
+    <section class="workshops" aria-label="Workshops">
+      <a target="_blank" class="card" href="https://docs.google.com/forms/d/e/1FAIpQLScNEKIIN7bJabbiMV9MX6y61ts440IDe6aON7X-YZ6lUJetKw/viewform?usp=header">
+        <img src="snuffelparcours.jpeg" alt="Snuffelparcours workshop">
+        <div class="content"><h2>Snuffel parcours</h2><p>Ontdekken en snuffelen op eigen tempo</p></div>
+      </a>
+      <a target="_blank" class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSf0mXaD0FTUs288-Bx_xgeUqxWgxxNsS7mDRAH5a_iz_-6mDA/viewform?usp=publish-editor">
+        <img src="movement-puzzels.jpeg" alt="Movement puzzels workshop">
+        <div class="content"><h2>Movement puzzels</h2><p>Puzzelen, bewegen en samen de uitdaging aan gaan.</p></div>
+      </a>
+      <a target="_blank" class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSfIFV4GD50x6oOAEynbE7ydjP6zTdn_t9ifjKagMXGJWRw5vw/viewform?usp=publish-editor">
+        <img src="rally-o.jpeg" alt="Rally-O workshop">
+        <div class="content"><h2>Rally-O</h2><p>Samenwerken tijdens een parcours vol leuke opdrachten</p></div>
+      </a>
+      <a target="_blank" class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSdpDRSFZyuD_384iaosuF6hZ5k_1VnYRsvnjyiC97QiJ0T3xg/viewform?usp=publish-editor">
+        <img src="hondenspeeltje.jpeg" alt="Maak je eigen hondenspeeltje workshop">
+        <div class="content"><h2>Maak je eigen hondenspeeltje</h2><p>Zelf creatief aan de slag voor je hond</p></div>
+      </a>
+      <a target="_blank" class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSf1Ndm8zpqUdmBjPG1DBilsFoeieDtlkKGK2LiwB3RvJD3oxw/viewform?usp=header">
+        <img src="detectie.jpeg" alt="Detectie workshop">
+        <div class="content"><h2>Detectie</h2><p>Aan de slag met die fantastische hondenneus!</p></div>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
